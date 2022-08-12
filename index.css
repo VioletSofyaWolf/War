@@ -5,4 +5,42 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url('./images/table.png');
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#new-deck {
+  background: yellow;
+  border: none;
+  text-align: left;
+  padding: 0.2em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 1em;
+  width: 115px;
+}
+
+#draw-cards {
+  background: yellow;
+  border: none;
+  padding: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  padding: 1em 0;
+  width: 250px;
+  height: auto;
 }
