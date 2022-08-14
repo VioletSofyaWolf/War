@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./index.css" />
     <title>War</title>
   </head>
 
   <body>
     <div class="container">
-      <button id="new-deck">Shuffle Deck</button>
+      <div class="main-header">
+        <button id="new-deck">Shuffle Deck</button>
+        <div id="cards-remaining" class="remaining-cards"></div>
+      </div>
 
-      <h2 id="winner">Game of War</h2>
+      <h2 id="winner" class="winner-text">Game of War</h2>
 
       <div id="cards">
         <div id="card" class="card-slot"></div>

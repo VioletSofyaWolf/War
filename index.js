@@ -12,6 +12,7 @@ const getNewDeck = () => {
     .then((response) => response.json())
     .then((data) => {
       deckId = data.deck_id;
+      cardsRemaining(data);
     });
 };
 
@@ -19,6 +20,7 @@ const getCards = () => {
   fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
     .then((response) => response.json())
     .then((data) => {
+      cardsRemaining(data);
       const cardOne = data.cards[0].image;
       const cardTwo = data.cards[1].image;
 
@@ -35,7 +37,7 @@ const getCards = () => {
     });
 };
 
-function determineCardWinner(card1, card2) {
+const determineCardWinner = (card1, card2) => {
   const valueOptions = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'JACK', 'QUEEN', 'KING', 'ACE'];
 
   const card1ValueIndex = valueOptions.indexOf(card1.value);
@@ -48,7 +50,13 @@ function determineCardWinner(card1, card2) {
   } else {
     return 'War!';
   }
-}
+};
+
+const cardsRemaining = (data) => {
+  document.getElementById('cards-remaining').textContent = `
+    Cards Remaining: ${data.remaining}
+    `;
+};
 
 newDeck.addEventListener('click', getNewDeck);
 drawCards.addEventListener('click', getCards);
