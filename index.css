@@ -23,10 +23,10 @@ body {
   border: none;
   align-self: flex-start;
   padding: 0.2em;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   margin-top: 1em;
-  width: 115px;
+  width: 120px;
   cursor: pointer;
 }
 
@@ -62,9 +62,22 @@ img:nth-of-type(1) {
   margin-bottom: 40px;
 }
 
-#winner {
+.winner-text {
   color: #fff;
   margin: 0 auto;
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 2rem;
+}
+
+.remaining-cards {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.2em;
+  margin: 0.8em 1em 0 0;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
