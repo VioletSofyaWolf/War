@@ -81,3 +81,7 @@ img:nth-of-type(1) {
   flex-direction: row;
   justify-content: space-between;
 }
+
+#draw-cards:disabled {
+  cursor: not-allowed;
+}
