@@ -1,11 +1,11 @@
 'use strict';
 
 let deckId;
-
 const newDeck = document.getElementById('new-deck');
 const drawCards = document.getElementById('draw-cards');
 const cardSlots = document.getElementById('cards');
 const winner = document.getElementById('winner');
+const remaining = document.getElementById('cards-remaining');
 
 const getNewDeck = () => {
   fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/')
@@ -53,9 +53,10 @@ const determineCardWinner = (card1, card2) => {
 };
 
 const cardsRemaining = (data) => {
-  document.getElementById('cards-remaining').textContent = `
+  remaining.textContent = `
     Cards Remaining: ${data.remaining}
     `;
+  data.remaining === 0 ? (drawCards.disabled = true) : '';
 };
 
 newDeck.addEventListener('click', getNewDeck);
